@@ -127,6 +127,13 @@ theme_config:
     name: XiaoBro
     version: 'HUB'
     doc: https://blog.anymelon.com
+  style:
+    body:
+      effect: [shadow,blur]
+    sidebar:
+      effect: [shadow,blur]
+    navbar:
+      effect: [shadow,blur]
   navbar:
     menu:
       - name: 首页
@@ -199,6 +206,14 @@ theme_config:
     wordcount: true
     aplayer:
       enable: false
+    backstretch:
+      enable: true
+      js: https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js
+      position: fixed       # cover: sticky on the cover.   fixed: Fixed as background for the site.
+      duration: 20000       # Duration (ms)
+      fade: 1500            # fade duration (ms) (Not more than 1500)
+      images:               # For personal use only. At your own risk if used for commercial purposes !!!
+        - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg
   footer:
     copyright: '[Copyright © 2020-2020 张潇](https://张潇.com) [黑ICP备17005381号-1](http://beian.miit.gov.cn/) [浙公安备 33010502004433](http://www.beian.gov.cn/portal/registerSystemInfo)'
     social:
