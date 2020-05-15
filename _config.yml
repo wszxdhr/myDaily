@@ -156,8 +156,10 @@ theme_config:
     on_page:
       body: [article,repos]
       sidebar: [related_posts,repos,toc]
+      meta:
+        header: [title,author,category,date,top,wordcount]
     on_list:
-      meta: [title,wordcount]
+      meta: [title,date,wordcount]
       sidebar: [blogger,tagcloud,donate,repos]
   widget:
     blogger:
@@ -204,3 +206,7 @@ theme_config:
         icon: fab fa-github
       - url: mailto:job@anymelon.com
         icon: fas fa-envelope
+  search:
+    enable: true
+    service: hexo
+
