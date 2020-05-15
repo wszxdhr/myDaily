@@ -1,0 +1,206 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 张潇的博客
+subtitle: 'Xiao Bro s Blog'
+description: 'Happy Developer'
+keywords: 'Blog,博客,张潇'
+author: Zhang Xiao
+language: zh-CN
+timezone: ''
+favicon: https://avatars1.githubusercontent.com/u/11972255?s=460&u=134892f02ec2decebc5a9cd71a8aac26dd032c2e&v=4
+baidu_analytics_key: fb53c51dfd71426d827b5f219ce27b79
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://blog.anymelon.com
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## Use post's date for updated date unless set in front-matter
+use_date_for_updated: false
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: hexo-theme-volantis
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: ''
+
+# Volantis theme config
+theme_config:
+  meta:
+    author:
+      name: Xiao Bro
+      url: https://张潇.com
+      avatar: https://avatars1.githubusercontent.com/u/11972255?s=460&u=134892f02ec2decebc5a9cd71a8aac26dd032c2e&v=4
+  cover:
+    title: 张潇的博客
+    search: 搜索博文
+    subtitle: 'A Happy Developer.'
+    features:
+      - name: 首页
+        icon: fas fa-flag
+        url: /
+      - name: 博文
+        icon: fas fa-book
+        url: /archives/
+      - name: Github
+        icon: fab fa-github
+        url: 'https://github.com/wszxdhr'
+  info:
+    name: XiaoBro
+    version: 'HUB'
+    doc: https://blog.anymelon.com
+  navbar:
+    menu:
+      - name: 首页
+        icon: fas fa-flag
+        url: /
+      - name: 博文
+        icon: fas fa-book
+        url: /archives/
+      - name: Github
+        icon: fab fa-github
+        url: 'https://github.com/wszxdhr'
+      - name: 关于博主
+        icon: fas fa-ellipsis-v
+        rows:
+        - name: 个人主页
+          url: https://张潇.com
+        - name: 个人简历
+          url: https://张潇.com/张潇的简历.pdf
+        - name: 联系博主
+          url: mailto:job@anymelon.com
+    search: 搜索
+  blogger:
+    avatar: https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/banner.png
+    title: Blogger Title
+    subtitle: Blogger SubTitle
+  layout:
+    on_page:
+      body: [article,repos]
+      sidebar: [related_posts,repos,toc]
+    on_list:
+      meta: [title,wordcount]
+      sidebar: [blogger,tagcloud,donate,repos]
+  widget:
+    blogger:
+      class: blogger
+      display: [desktop,mobile] # [desktop, mobile]
+      avatar: https://avatars1.githubusercontent.com/u/11972255?s=460&u=134892f02ec2decebc5a9cd71a8aac26dd032c2e&v=4
+      title: 张潇
+      subtitle: https://github.com/wszxdhr
+      jinrishici: false # Poetry Today. You can set a string, and it will be displayed when loading fails.
+      social: true
+    related_posts:
+      class: related_posts # npm i -S hexo-related-popular-posts
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fas fa-bookmark
+        title: 相关文章
+      max_count: 5
+    donate:
+      class: qrcode
+      display: [desktop, mobile] # [desktop, mobile]
+      height: 120px  # Automatic height if not set
+      fancybox: true
+      images:
+        - https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/alipay.JPG
+        - https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/wxpay.JPG
+    repos:
+      class: text
+      display: [desktop,mobile] # [desktop, mobile]
+      header:
+        icon: fab fa-github
+        title: 点个赞吧
+        url: https://github.com/xaoxuu/
+      content:
+        - '您的赞对我来说很重要，如果您喜欢本博客或博主，希望能够给下面的项目点个赞来支持一下。'
+        - '[<img src="https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/flexable_banner.png" height="82px">](https://github.com/mofishteam/mofish-plugin-proxy/)'
+  plugins:
+    wordcount: true
+    aplayer:
+      enable: false
+  footer:
+    copyright: '[Copyright © 2020-2020 张潇](https://张潇.com) [黑ICP备17005381号-1](http://beian.miit.gov.cn/) [浙公安备 33010502004433](http://www.beian.gov.cn/portal/registerSystemInfo)'
+    social:
+      - url: 'https://github.com/wszxdhr'
+        icon: fab fa-github
+      - url: mailto:job@anymelon.com
+        icon: fas fa-envelope

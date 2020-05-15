@@ -1,0 +1,40 @@
+version: 1.0.1
+language: cn
+
+# Header
+menu:
+  Home: /
+  Archives: /archives
+rss:
+
+# Content
+excerpt_link: Read More
+copyright: true
+
+# Sidebar
+widgets:
+- toc # 如果不需要 TOC 则关闭此项
+- category
+- tag
+- recent_posts
+- archive
+
+# Widget behavior
+archive_type: 'yearly'
+
+# Site Info
+logo: /images/avatar.jpg
+
+# Social
+social:
+  # facebook: '/'
+  twitter: 'https://twitter.com/lh1me'
+  # weibo: '/'
+  # dribbble: '/'
+  # instagram: '/'
+  github: 'https://github.com/lh1me'
+
+# More Config
+# disqus_shortname: 
+# baidu_sitepush: true
+# google_analytics: 
