@@ -159,7 +159,7 @@ theme_config:
           url: mailto:job@anymelon.com
     search: 搜索
   blogger:
-    avatar: https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/banner.png
+    avatar: https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/transparent_banner.png
     title: Blogger Title
     subtitle: Blogger SubTitle
   layout:
@@ -170,7 +170,7 @@ theme_config:
         header: [title,author,category,date,top,wordcount]
     on_list:
       meta: [title,date,wordcount]
-      sidebar: [blogger,tagcloud,donate,repos]
+      sidebar: [blogger,tagcloud,repos,donate]
   widget:
     blogger:
       class: blogger
@@ -204,7 +204,7 @@ theme_config:
         url: https://github.com/xaoxuu/
       content:
         - '您的赞对我来说很重要，如果您喜欢本博客或博主，希望能够给下面的项目点个赞来支持一下。'
-        - '[<img src="https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/flexable_banner.png" height="82px">](https://github.com/mofishteam/mofish-plugin-proxy/)'
+        - '[<img src="https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/transparent_banner.png" height="82px">](https://github.com/mofishteam/mofish-plugin-proxy/)'
   plugins:
     wordcount: true
     aplayer:
