@@ -123,6 +123,9 @@ theme_config:
       - name: Github
         icon: fab fa-github
         url: 'https://github.com/wszxdhr'
+      - name: 个人主页
+        icon: fas fa-play-circle
+        url: 'https://张潇.com'
   info:
     name: XiaoBro
     version: 'HUB'
