@@ -164,7 +164,7 @@ theme_config:
     subtitle: Blogger SubTitle
   layout:
     on_page:
-      body: [article,repos]
+      body: [article,repos,comments]
       sidebar: [related_posts,repos,toc]
       meta:
         header: [title,author,category,date,top,wordcount]
@@ -227,4 +227,14 @@ theme_config:
   search:
     enable: true
     service: hexo
-
+  comments:
+    title: <i class='fas fa-comments'></i> 评论
+    subtitle: 欢迎提问或提出宝贵意见，博主会在看到的第一时间回复~
+    service: gitalk # valine, disqus, gitalk, livere
+    valine: false
+    gitalk:
+      clientID: f02555703ef89d86700d
+      clientSecret: 67a91ccc471e85a0267088168d6877687553d752
+      repo: 'myDaily'
+      owner: 'wszxdhr'
+      admin: ['wszxdhr']

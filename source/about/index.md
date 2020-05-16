@@ -5,7 +5,7 @@ meta:
   header: [centertitle]
   footer: []
 sidebar: []
-valine:
+gitalk:
   placeholder: 有什么想对我说的呢？
 ---
 
