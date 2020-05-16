@@ -102,13 +102,13 @@ function fileDisplay (filePath) {
     const isFile = stats.isFile() // 是文件
     const isDir = stats.isDirectory() // 是文件夹
     if (isFile) {
-      console.log('正在尝试上传：' + filename)
       // 增加白名单，目前只传images文件夹
       const whiteList = ['images']
       const filePathResult = filedir.replace(distDir + '/', 'blog/')
       for (const whiteItem of whiteList) {
         const reg = new RegExp('^blog\\\/' + whiteItem)
         if (reg.test(filePathResult)) {
+          console.log('正在尝试上传：' + filename)
           uploadList.push([filedir, filePathResult])
         }
       }
