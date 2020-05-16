@@ -195,8 +195,8 @@ theme_config:
       height: 120px  # Automatic height if not set
       fancybox: true
       images:
-        - https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/alipay.JPG
-        - https://github.com/mofishteam/mofish-plugin-proxy/raw/master/docs/image/wxpay.JPG
+        - https://blog.anymelon.com/images/alipay.jpg
+        - https://blog.anymelon.com/images/wxpay.jpg
     repos:
       class: text
       display: [desktop,mobile] # [desktop, mobile]

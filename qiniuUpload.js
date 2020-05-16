@@ -103,7 +103,15 @@ function fileDisplay (filePath) {
     const isDir = stats.isDirectory() // 是文件夹
     if (isFile) {
       console.log('正在尝试上传：' + filename)
-      uploadList.push([filedir, filedir.replace(distDir + '/', 'blog/')])
+      // 增加白名单，目前只传images文件夹
+      const whiteList = ['images', 'index.html']
+      const filePathResult = filedir.replace(distDir + '/', 'blog/')
+      for (const whiteItem of whiteList) {
+        const reg = new RegExp('^blog\\\/' + whiteItem)
+        if (reg.test(filePathResult)) {
+          uploadList.push([filedir, filePathResult])
+        }
+      }
     }
     if (isDir) {
       fileDisplay(filedir) // 递归，如果是文件夹，就继续遍历该文件夹下面的文件
