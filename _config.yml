@@ -10,6 +10,7 @@ keywords: 'Blog,博客,张潇'
 author: Zhang Xiao
 language: zh-CN
 timezone: ''
+use_cdn: true
 favicon: https://avatars1.githubusercontent.com/u/11972255?s=460&u=134892f02ec2decebc5a9cd71a8aac26dd032c2e&v=4
 baidu_analytics_key: fb53c51dfd71426d827b5f219ce27b79
 
@@ -171,6 +172,7 @@ theme_config:
     on_list:
       meta: [title,date,wordcount]
       sidebar: [blogger,tagcloud,repos,donate]
+      readmore: '阅读全文 ＞'
   widget:
     blogger:
       class: blogger

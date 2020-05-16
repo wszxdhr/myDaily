@@ -6,6 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
+    "deploy:qiniu": "node qiniuUpload.js",
     "server": "hexo server"
   },
   "hexo": {
