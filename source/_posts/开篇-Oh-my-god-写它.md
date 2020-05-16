@@ -1,5 +1,5 @@
 ---
-title: 开篇: Oh my god! 写它!
+title: '开篇: Oh my god! 写它!'
 date: 2020-05-15 09:38:38
 categories: [开篇,杂文]
 tags: 
