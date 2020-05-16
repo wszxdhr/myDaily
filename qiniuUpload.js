@@ -104,7 +104,7 @@ function fileDisplay (filePath) {
     if (isFile) {
       console.log('正在尝试上传：' + filename)
       // 增加白名单，目前只传images文件夹
-      const whiteList = ['images', 'index.html']
+      const whiteList = ['images']
       const filePathResult = filedir.replace(distDir + '/', 'blog/')
       for (const whiteItem of whiteList) {
         const reg = new RegExp('^blog\\\/' + whiteItem)
