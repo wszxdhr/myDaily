@@ -14,11 +14,29 @@ use_cdn: true
 favicon: https://avatars1.githubusercontent.com/u/11972255?s=460&u=134892f02ec2decebc5a9cd71a8aac26dd032c2e&v=4
 baidu_analytics_key: fb53c51dfd71426d827b5f219ce27b79
 
+# SEO
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
+nofollow:
+  enable: true
+  exclude:
+
+robotstxt:
+  useragent: "*"
+  disallow:
+  allow:
+    - /*
+  sitemap: /sitemap.xml
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://blog.anymelon.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year-:month-:day-:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -95,6 +113,10 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+plugins:
+  - hexo-generator-robotstxt
+  - hexo-generator-baidu-sitemap
+  - hexo-generator-seo-friendly-sitemap
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-volantis
 
