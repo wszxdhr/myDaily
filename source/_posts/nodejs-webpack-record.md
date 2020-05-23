@@ -39,7 +39,7 @@ tags: [NodeJs,Webpack]
 ### 基础配置
 
 `webpack.conf.base.js`中一开始的配置是这样的：
-```
+```javascript
   module.exports = {
     target: 'node'
   }
@@ -49,7 +49,7 @@ tags: [NodeJs,Webpack]
 
 先安装eslint及一些插件：
 
-```
+```shell
 npm install --save-dev eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
 ```
 
@@ -70,7 +70,7 @@ npm install --save-dev eslint eslint-config-standard eslint-plugin-standard esli
 这样Webpack就可以进行代码审查了
 
 添加`webpack-node-externals`这个模块是因为在开发中引用了一些依赖导致报错：
-```
+```shell
   WARNING in ./node_modules/_any-promise@1.3.0@any-promise/register.js 24:14-37
   Critical dependency: the request of a dependency is an expression
    @ ./node_modules/_any-promise@1.3.0@any-promise/index.js
@@ -83,7 +83,7 @@ npm install --save-dev eslint eslint-config-standard eslint-plugin-standard esli
 在正常直接执行js脚本时是没有的
 
 最后的配置是这样的：
-```
+```javascript
   const nodeExternals = require('webpack-node-externals')
 
   module.exports = {
@@ -107,7 +107,7 @@ npm install --save-dev eslint eslint-config-standard eslint-plugin-standard esli
 ### 编译后直接运行
 
 下面就是`webpack.conf.shell.js`的配置：
-```
+```javascript
 const RunNodeWebpackPlugin = require('run-node-webpack-plugin')
 
 module.exports = {
@@ -123,7 +123,7 @@ module.exports = {
 
 `webpack.conf.command.js`的配置如下：
 
-```
+```javascript
 const path = require('path')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.conf.base')
@@ -152,11 +152,12 @@ module.exports = webpackConfig
 
 ## npm scripts
 
-```
+```json
 "dev:command": "cross-env mode=\"development\" webpack --config ./build/webpack.conf.command.js --mode development",
 ```
-```
+```json
 "build:command": "cross-env mode=\"production\" webpack --config ./build/webpack.conf.command.js --mode production"
 ```
 
 至此我就可以用一个`npm run dev:command`命令来同时编译和运行，再用另一个命令来编译啦
+
