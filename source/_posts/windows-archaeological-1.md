@@ -5,6 +5,8 @@ tags: [Windows, 考古, 系统]
 categories: [考古]
 ---
 
+<img src="/images/windows考古/win31_banner.gif" style="max-height: 250px"/>
+
 今天折腾了一天Docker和虚拟机，无意中看到了以前Windows 2000的镜像文件，突然心血来潮想从Windows 3.x开始体验一圈Windows，毕竟也算半个软粉来着，算是为着情怀追溯一下。
 
 这是我第一次安装这么古老的Windows，发现这个Windows 3.1异常的难装（电脑是MacOS+虚拟机VirtualBox），折腾了俩小时终于弄通了。
