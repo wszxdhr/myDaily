@@ -33,6 +33,38 @@ categories: [电子设备折腾记]
 
 <img src="/images/homeassistant/port_setting.jpg" style="max-height: 400px"/>
 
+设置端口映射，容器端口为8123，可以映射到主机的任意未开启的端口
+
 <img src="/images/homeassistant/container.jpg" style="max-height: 300px"/>
 
-## 
+点击“应用”后容器会自己启动，等待2min，即可用NAS的地址加上刚才设置的端口进入hass的webui
+
+## 进入主界面
+
+<img src="/images/homeassistant/hass_register.jpg" style="max-height: 400px"/>
+
+输入用户名密码等，创建管理员账户
+
+进入一些初始化设置，设置好点击下一步
+
+<img src="/images/homeassistant/hass_homekit_init.jpg" style="max-height: 400px"/>
+
+如果已有homekit智能配件，可以先配置好配件再点完成，进入首页，如下图：
+
+<img src="/images/homeassistant/hass_homepage.jpg" style="max-height: 400px"/>
+
+到此hass的初始化就完成了
+
+## 添加一些设备
+
+<img src="/images/homeassistant/hass_add_device_1.jpg" style="max-height: 400px"/>
+
+如上图，从左侧栏进入“配置”，点击右下角进行设备添加，这里以添加一个yeelight灯为例
+
+<img src="/images/homeassistant/hass_add_yeelight_demo.jpg" style="max-height: 400px"/>
+
+在搜索框中搜索yeelight，点击yeelight进入下一步
+
+<img src="/images/homeassistant/hass_add_yeelight_host.jpg" style="max-height: 200px"/>
+
+输入yeelight所在的ip，找不到的需要下载一个yeelight官方app，找到你想要添加的灯，在设置里打开“局域网控制”，找到对应ip，如果加入过米家也可以在米家查看ip，但是“局域网控制”选项只有yeelight app中有。

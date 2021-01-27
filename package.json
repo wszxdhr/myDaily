@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon --exec \"hexo server\" --watch ./_config.yml",
+    "dev": "hexo clean && nodemon --exec \"hexo server\" --watch ./_config.yml",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
