@@ -51,6 +51,32 @@ categories: [软件使用]
 
 # 五、ZSH
 
-# 六、iStatMenus
+ZSH的配置比较麻烦，首先先安装Oh-My-ZSH
+
+可以参照这篇文章：https://www.jianshu.com/p/53eb1075f627
+
+安装插件：https://www.jianshu.com/p/59a3f1601cfc
+
+然后我正在使用的不是原装的主题，使用了powerlevel10k，GitHub地址和教程：https://github.com/romkatv/powerlevel10k
+
+这些都搞定了之后开始正题
+
+ZSH的配置文件在`~/.zshrc`，powerlevel10k的配置文件在`~/.p10k.zsh`
+
+这两个文件用finder是看不到的，需要用命令行的`la`命令，或者`ls -a`命令才能看到
+
+然后打开finder，进入`iCloud云盘`，新建一个文件夹，将文件夹拖入命令行，就能看到iCloud文件夹的具体路径了
+
+命令行回到home文件夹（`~路径`），用cp命令把`.zshrc`和`.p10k.zsh`复制到刚刚iCloud中新建的文件夹中
+
+再在`~`目录下分别修改两个文件，把里面内容都删掉，加一行source命令，类似：
+
+`source /User/xxx/iCloud/config/.zshrc`
+
+这样每次zsh和powerlevel10k在读取他们的配置文件时，就相当于在读取iCloud中存储的配置文件了
 
 # 七、Snipaste
+
+经过上面的操作，这个简单了，看图吧
+
+<img src="/images/macos_tools/snipaste.jpg" style="max-height: 400px"/>
