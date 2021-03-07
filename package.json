@@ -16,6 +16,7 @@
   "dependencies": {
     "hexo": "^4.0.0",
     "hexo-autonofollow": "^1.0.1",
+    "hexo-filter-mermaid-diagrams": "^1.0.5",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.6",
     "hexo-generator-category": "^1.0.0",
