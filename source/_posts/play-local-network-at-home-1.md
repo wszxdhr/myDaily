@@ -39,10 +39,8 @@ tags: [电子设备,局域网配置]
 
 环顾四周，发现了默默躺在电视柜下面的黑群晖，底部ITX主板上面，除了一个插着网线的RJ45口，还黑漆漆的露着一个RJ45
 
-{% fancybox %}
 <img src="/images/在家折腾局域网实录/电视柜下的群晖.jpg" height="150px"/>
 <img src="/images/在家折腾局域网实录/群晖的俩网口.jpg" height="150px"/>
-{% endfancybox %}
 
 对哦，我黑群晖是双千兆的蜗牛星际C款，棒
 

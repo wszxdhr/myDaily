@@ -30,13 +30,9 @@ tags: [电子设备,局域网配置,DNS,网络知识]
 
 拿回来迅速安排
 
-{% fancybox %}
-
 <img src="/images/在家折腾局域网实录/TP路由盒子.jpg" height="100px"/>
 
 <img src="/images/在家折腾局域网实录/TP路由.jpg" height="100px"/>
-
-{% endfancybox %}
 
 ## 配置路由器
 

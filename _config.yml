@@ -14,28 +14,9 @@ use_cdn: true
 favicon: https://avatars1.githubusercontent.com/u/11972255?s=460&u=134892f02ec2decebc5a9cd71a8aac26dd032c2e&v=4
 baidu_analytics_key: fb53c51dfd71426d827b5f219ce27b79
 
-# SEO
-sitemap:
-  path: sitemap.xml
-
-baidusitemap:
-  path: baidusitemap.xml
-
-nofollow:
-  enable: true
-  exclude:
-
-robotstxt:
-  useragent: "*"
-  disallow:
-  allow:
-    - /*
-  sitemap: /sitemap.xml
-
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://blog.anymelon.com
-root: /
 permalink: :year/:month-:day-:title/
 permalink_defaults:
 pretty_urls:
@@ -72,6 +53,11 @@ highlight:
   tab_replace: ''
   wrap: true
   hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -97,12 +83,12 @@ meta_generator: true
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 20
 pagination_dir: page
 
 # Include / Exclude file(s)
@@ -113,19 +99,32 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-#plugins:
-#  - hexo-generator-robotstxt
-#  - hexo-generator-baidu-sitemap
-#  - hexo-generator-seo-friendly-sitemap
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-volantis
+theme: volantis
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
 
-# Volantis theme config
+# SEO
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
+nofollow:
+  enable: true
+  exclude:
+
+robotstxt:
+  useragent: "*"
+  disallow:
+  allow:
+    - /*
+  sitemap: /sitemap.xml
+
 theme_config:
   mermaid: ## mermaid url https://github.com/knsv/mermaid
     enable: true  # default true
@@ -192,12 +191,12 @@ theme_config:
       - name: 关于博主
         icon: fas fa-ellipsis-v
         rows:
-        - name: 个人主页
-          url: https://张潇.com
-        - name: 个人简历
-          url: https://张潇.com/张潇的简历.pdf
-        - name: 联系博主
-          url: mailto:job@anymelon.com
+          - name: 个人主页
+            url: https://张潇.com
+          - name: 个人简历
+            url: https://张潇.com/张潇的简历.pdf
+          - name: 联系博主
+            url: mailto:job@anymelon.com
     search: 搜索
   blogger:
     avatar: https://blog.anymelon.com/images/transparent_banner.png
@@ -268,7 +267,7 @@ theme_config:
         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/2884F904-F1F3-479E-AE27-5EBC291B63B0.jpeg
         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/250662D4-5A21-4AAA-BB63-CD25CF97CFF1.jpeg
   footer:
-    copyright: '[Copyright © 2020-2020 张潇](https://张潇.com) [黑ICP备17005381号-1](http://beian.miit.gov.cn/) [浙公安备 33010502004433](http://www.beian.gov.cn/portal/registerSystemInfo)'
+    copyright: '[Copyright © 2020-2021 张潇](https://张潇.com) [黑ICP备17005381号-1](http://beian.miit.gov.cn/) [浙公安备 33010502004433](http://www.beian.gov.cn/portal/registerSystemInfo)'
     social:
       - url: 'https://github.com/wszxdhr'
         icon: fab fa-github
