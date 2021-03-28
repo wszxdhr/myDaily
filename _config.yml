@@ -47,12 +47,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
+  enable: false
 prismjs:
   enable: false
   preprocess: true
@@ -130,7 +125,7 @@ theme_config:
     enable: true  # default true
     version: "7.1.2" # default v7.1.2
     options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
-    #startOnload: true  // default true
+    startOnload: true  // default true
 
   meta:
     author:
@@ -143,27 +138,24 @@ theme_config:
     subtitle: 'A Happy Developer.'
     features:
       - name: 首页
-        icon: fas fa-home
+        img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
         url: /
       - name: 归档
-        icon: fas fa-book
+        img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg
         url: /archives/
       - name: 分类
-        icon: fas fa-list
+        img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c2.svg
         url: /categories/
       - name: 标签
-        icon: fas fa-flag
+        img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg
         url: /tags/
-      - name: Github
-        icon: fab fa-github
+      - name: GitHub
+        img: https://blog-file.anymelon.com/Octocat2.png
+        height: 41px
         url: 'https://github.com/wszxdhr'
       - name: 个人主页
-        icon: fas fa-play-circle
+        img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f3aa.svg
         url: 'https://张潇.com'
-  info:
-    name: XiaoBro
-    version: 'HUB'
-    doc: https://blog.anymelon.com
   style:
     body:
       effect: [shadow,blur]
@@ -172,6 +164,13 @@ theme_config:
     navbar:
       effect: [shadow,blur]
   navbar:
+    logo:
+      title: XiaoBro
+      version: 'HUB'
+      doc: https://blog.anymelon.com
+      img:
+#      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg
+    visiable: always # always, auto
     menu:
       - name: 首页
         icon: fas fa-home
@@ -191,63 +190,21 @@ theme_config:
       - name: 关于博主
         icon: fas fa-ellipsis-v
         rows:
+          - name: 关于博主
+            url: /about
           - name: 个人主页
             url: https://张潇.com
           - name: 个人简历
             url: https://张潇.com/张潇的简历.pdf
           - name: 联系博主
             url: mailto:job@anymelon.com
+      - name: 暗黑模式 # 可自定义
+        icon: fas fa-moon # 可自定义
+        toggle: darkmode
+
     search: 搜索
-  blogger:
-    avatar: https://blog.anymelon.com/images/transparent_banner.png
-    title: Blogger Title
-    subtitle: Blogger SubTitle
-  layout:
-    on_page:
-      body: [article,repos,comments]
-      sidebar: [related_posts,repos,toc]
-      meta:
-        header: [title,author,category,date,top,wordcount]
-    on_list:
-      meta: [title,date,wordcount]
-      sidebar: [blogger,tagcloud,category,repos,donate]
-      readmore: '阅读全文 ＞'
-  widget:
-    blogger:
-      class: blogger
-      display: [desktop,mobile] # [desktop, mobile]
-      avatar: https://avatars1.githubusercontent.com/u/11972255?s=460&u=134892f02ec2decebc5a9cd71a8aac26dd032c2e&v=4
-      title: 张潇
-      subtitle: https://github.com/wszxdhr
-      jinrishici: false # Poetry Today. You can set a string, and it will be displayed when loading fails.
-      social: true
-    related_posts:
-      class: related_posts # npm i -S hexo-related-popular-posts
-      display: [desktop, mobile] # [desktop, mobile]
-      header:
-        icon: fas fa-bookmark
-        title: 相关文章
-      max_count: 5
-    donate:
-      class: qrcode
-      display: [desktop, mobile] # [desktop, mobile]
-      height: 120px  # Automatic height if not set
-      fancybox: true
-      images:
-        - https://blog.anymelon.com/images/alipay.jpg
-        - https://blog.anymelon.com/images/wxpay.jpg
-    repos:
-      class: text
-      display: [desktop,mobile] # [desktop, mobile]
-      header:
-        icon: fab fa-github
-        title: 点个赞吧
-        url: https://github.com/xaoxuu/
-      content:
-        - '您的赞对我来说很重要，如果您喜欢本博客或博主，希望能够给下面的项目点个赞来支持一下。'
-        - '[<img src="https://blog.anymelon.com/images/transparent_banner.png" height="82px">](https://github.com/mofishteam/mofish-plugin-proxy/)'
+
   plugins:
-    wordcount: true
     aplayer:
       enable: false
     backstretch:
@@ -278,13 +235,7 @@ theme_config:
         - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg
         - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg
         - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg
-  footer:
-    copyright: '[Copyright © 2020-2021 张潇](https://张潇.com) [黑ICP备17005381号-1](http://beian.miit.gov.cn/) [浙公安备 33010502004433](http://www.beian.gov.cn/portal/registerSystemInfo)'
-    social:
-      - url: 'https://github.com/wszxdhr'
-        icon: fab fa-github
-      - url: mailto:job@anymelon.com
-        icon: fas fa-envelope
+
   search:
     enable: true
     service: hexo
@@ -299,3 +250,25 @@ theme_config:
       repo: 'myDaily'
       owner: 'wszxdhr'
       admin: ['wszxdhr']
+
+
+import:
+  link:
+  script:
+    - '<style type="text/css"> .cover-body .navigation a img { width: 40px; height: 40px; } .cover-body .navigation a p { word-break: keep-all; } </style>'
+    - '<style type="text/css">.md .footer .related_posts .body .vlts-rps .item { text-align: center; } .md .footer .related_posts .body .vlts-rps img { width: auto; height: 200px; }</style>'
+    - '<style type="text/css">[data-user-color-scheme=dark] .hljs { background: #1a1a1a; }</style>'
+    - '<style type="text/css">[data-user-color-scheme=dark] .mermaid .messageText { fill: #f2f2f2; }</style>'
+    - '<style type="text/css">[data-user-color-scheme=dark] .mermaid #arrowhead { fill: #f2f2f2; }</style>'
+    - '<style type="text/css">[data-user-color-scheme=dark] .mermaid .messageLine0 { stroke: #f2f2f2; }</style>'
+    - '<style type="text/css">[data-user-color-scheme=dark] .mermaid .actor-line { stroke: #e7e7e7; }</style>'
+    - '<style type="text/css">[data-user-color-scheme=dark] .hljs-comment { color: #ccc; }</style>'
+    - '<style type="text/css">[data-user-color-scheme=dark] .hljs { color: #ccc; }</style>'
+    - '<style type="text/css">.article pre { border-color: #e7e7e7; }</style>'
+    - '<style type="text/css">.about-github-show { margin: 0 auto; }</style>'
+    - '<style type="text/css">.cover-wrapper .cover-body .title, .cover-wrapper .cover-body .subtitle { text-shadow: 0 0px 14px rgb(68 68 68 / 50%); }</style>'
+    - '<style type="text/css">[data-user-color-scheme=dark] .dark-mode-hide { display: none; }</style>'
+    - '<style type="text/css">[data-user-color-scheme=dark] .dark-mode-show { display: block; }</style>'
+    - '<style type="text/css">.dark-mode-show { display: none; }</style>'
+    - '<script src="https://cdn.jsdelivr.net/npm/mermaid@7.1.2/dist/mermaid.min.js"></script>'
+    - '<script>if (window.mermaid) {mermaid.initialize({theme: "forest" });}</script>'

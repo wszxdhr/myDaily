@@ -5,7 +5,11 @@ tags: [Windows, 考古, 系统]
 categories: [考古]
 ---
 
-<img src="/images/windows考古/win95_banner.jpeg" style="max-height: 250px"/>
+{% gallery stretch, 1 %}
+
+​	<img src="../../../../../../images/windows考古/win95_banner.jpeg" style="width: 350px;"/>
+
+{% endgallery %}
 
 自从上次搞过WINDOWS 3.1的考古，一发不可收拾，虚拟机折腾了DOS 7.1，感觉像是回到了上个世纪。
 
@@ -15,6 +19,10 @@ categories: [考古]
 <!-- more -->
 
 ## 安装
+
+### 准备工作
+
+{% folding cyan open, 点击展开 / 收缩 %}
 
 这次还是用DOS 6.22做底，可以到这个网站找到相应的镜像：
 
@@ -29,6 +37,10 @@ https://winworldpc.com/product/windows-95/osr-3
 我选择的是中文的[CD Windows 95 OSR2.1 \[Simpl. Chinese\] (OEM) (ISO)](https://winworldpc.com/download/3f5444c2-b718-c39a-11c3-a4e284a2c3a5)
 
 喜欢英文系统的也可以用这个[Windows 95 OSR2 (OEM) (ISO)](https://winworldpc.com/download/48373a22-25c3-8911-c3a6-e280947e5254)
+
+{% endfolding %}
+
+### 创建虚拟机
 
 下载完DOS622和WIN95系统，到虚拟机（这里使用VirtualBox）新建一个虚拟机
 
