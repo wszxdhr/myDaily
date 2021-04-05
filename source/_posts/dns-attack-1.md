@@ -3,6 +3,17 @@ title: DNS劫持原理及实践（上）
 date: 2021-02-24 09:48:49
 tags: [DNS,网络安全]
 categories: [学习和实践笔记]
+references:
+  - title: 《DNS 域名解析流程剖析（详解版）》
+    url: http://c.biancheng.net/view/6455.html
+  - title: 《DNS 原理入门》
+    url: https://www.ruanyifeng.com/blog/2016/06/dns.html
+  - title: 《DNS 请求报文详解》
+    url: https://juejin.cn/post/6844903582441963527
+  - title: 《DNS使用的是TCP协议还是UDP协议》
+    url: https://www.iteye.com/blog/benbenxiongyuan-1088085
+  - title: 《5. DNS 报文结构和个人 DNS 解析代码实现——解决 getaddrinfo() 阻塞问题》
+    url: https://segmentfault.com/a/1190000009369381
 ---
 
 之前的文章[在家折腾局域网实录(上)](https://blog.anymelon.com/2020/05-16-play-local-network-at-home-1/)中写到过，通过家里搭建一个DNS服务器来实现 同一个域名，在局域网和互联网中对应不同IP的功能。
@@ -488,13 +499,4 @@ DNS劫持实施的途径可以是~~（潜入他的房间）~~更改被侵入者�
 杭州的小伙伴着实可以借个光，223.5.5.5服务器就在杭州机房：
 
 <img src="/images/dns_attack/alibabadnsposition.jpg" style="max-height: 400px"/>
-
-
-## 参考文献
-
-1. [《DNS 域名解析流程剖析（详解版）》](http://c.biancheng.net/view/6455.html)
-2. [《DNS 原理入门》](https://www.ruanyifeng.com/blog/2016/06/dns.html)
-3. [《DNS 请求报文详解》](https://juejin.cn/post/6844903582441963527)
-4. [《DNS使用的是TCP协议还是UDP协议》](https://www.iteye.com/blog/benbenxiongyuan-1088085)
-5. [《5. DNS 报文结构和个人 DNS 解析代码实现——解决 getaddrinfo() 阻塞问题》](https://segmentfault.com/a/1190000009369381)
 
