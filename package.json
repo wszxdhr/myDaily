@@ -1,6 +1,6 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "zhangxiao-blog",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "hexo clean && nodemon --exec \"hexo server\" --watch ./_config.yml",
@@ -11,7 +11,7 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "5.4.0"
   },
   "dependencies": {
     "hexo": "^4.0.0",
@@ -34,7 +34,7 @@
     "hexo-wordcount": "^6.0.1"
   },
   "devDependencies": {
-    "commander": "^5.1.0",
+    "commander": "^7.2.0",
     "md5": "^2.2.1",
     "nodemon": "^2.0.4",
     "qiniu": "^7.3.1"

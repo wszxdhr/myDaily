@@ -17,8 +17,10 @@ program
   .option('--sk <sk>', 'Qiniu SecretKey.')
   .parse(process.argv)
 
-const accessKey = program.ak
-const secretKey = program.sk
+const options = program.opts()
+
+const accessKey = options.ak
+const secretKey = options.sk
 
 console.log('key md5: ' + md5(accessKey + secretKey))
 
