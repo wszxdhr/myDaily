@@ -1,5 +1,5 @@
 ---
-title: 图形学学习笔记（一）
+title: 图形学学习笔记（一）：线性代数
 date: 2021-06-20 20:20:01
 tags: [图形学,线性代数]
 categories: [图形学]
@@ -18,15 +18,17 @@ references:
 
 反正图形学的介绍啥的就不写了，懂的都懂。
 
+第一篇先来说说线性代数
+
 <!--more-->
 
-# 一、图形学的计算根基：线性代数
+# 图形学的根基：线性代数
 
-讲到这里就流下了悔恨的眼泪，大学时候没学好的课，现在就要含着泪补完。。。
+说到线性代数，悔恨的眼泪就流了下来，大学时候没学好的课，现在就要含着泪补完。。。
 
 {% image /images/006HJgYYgy1fxuorwt4tpg30aa0bldgu.gif, width=150px %}
 
-## 1 向量
+## 1 向量（Vector）
 
 向量，也可以叫矢量，它表示一个方向，从图形学角度来理解向量，就是表示：**起点为原点（0, 0），有方向，有长度**，通俗地讲，也可以理解为一个**起点为原点的有长度的箭头**。
 
@@ -36,7 +38,19 @@ references:
 
 向量有起点和终点，终点和起点的距离为向量的长度，起点到终点的方向为向量的方向。
 
-### 1.1 向量相加
+由于向量只表示一种方向和方向上的距离，所以平移向量是没有意义的，无论把向量平移到什么位置，向量都是不变的。
+
+### 1.1 向量的模（Magnitude）
+
+{% mathjax %} /\left \| \vec{a} \right \|  {% endmathjax %}
+
+![image-20210626001122559](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001122559.png)
+
+### 1.2 单位向量（Unit Vector）
+
+{% mathjax %}\hat{a}=\vec{a} /\left \| \vec{a} \right \|  {% endmathjax %}
+
+### 1.3 向量相加
 
 比如我有这样两个向量，分别为{% mathjax %}\vec{a} {% endmathjax %}和{% mathjax %}\vec{b}{% endmathjax %}，我想计算它们相加的结果：{% mathjax %}\vec{c} {% endmathjax %} = {% mathjax %}\vec{a} + \vec{b}{% endmathjax %}
 
@@ -149,3 +163,31 @@ references:
 {% image /images/image-20210620234630738.png, width=250px %}
 
 他们的结果相同
+
+### 1.4 向量相乘
+
+#### 1.4.1 点乘
+
+点乘会得到一个数字
+
+点乘可以计算夹角，进而分解一个向量
+
+![image-20210626001213506](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001213506.png)
+
+![image-20210626001512332](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001512332.png)
+
+![image-20210626001549261](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001549261.png)
+
+![image-20210626001910607](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001910607.png)
+
+#### 1.4.2 叉乘
+
+## 2 矩阵
+
+向量也是一种矩阵，转置
+
+## 3 矩阵运算
+
+## 4 缩放、旋转、平移
+
+## 5 齐次坐标
