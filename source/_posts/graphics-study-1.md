@@ -40,13 +40,29 @@ references:
 
 由于向量只表示一种方向和方向上的距离，所以平移向量是没有意义的，无论把向量平移到什么位置，向量都是不变的。
 
+比如一个长度为5，方向在第一象限，终点的`x`为`3`，`y`为`4`的向量，在线性代数中可以被表示为：{% mathjax %} \begin{bmatrix}3\\4\end{bmatrix}{% endmathjax %}
+
+向量的表示和矩阵很像（二维向量就是一个2行1列的矩阵），这个后面会提到
+
 ### 1.1 向量的模（Magnitude）
 
-{% mathjax %} /\left \| \vec{a} \right \|  {% endmathjax %}
+向量的模是指**向量的长度**，是一个数字，不带方向
 
-![image-20210626001122559](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001122559.png)
+二维a向量的模的数学表示方式：{% mathjax %} \left \| \vec{a} \right \|=\sqrt{x^{2}+y^{2} }  {% endmathjax %}
+
+比如一个向量：{% mathjax %} \begin{bmatrix}3\\4\end{bmatrix}  {% endmathjax %}，它的模{% mathjax %} \left \| \vec{a} \right \|=\sqrt{3^{2}+4^{2} } =5  {% endmathjax %}
 
 ### 1.2 单位向量（Unit Vector）
+
+单位向量是指**长度为1的向量**
+
+单位向量数学上表示为：{% mathjax %}\hat{a}  {% endmathjax %}
+
+所以有：{% mathjax %} x^{2}+y^{2}=1  {% endmathjax %}
+
+很多人称之为“a帽”（a hat）
+
+单位向量可以由**任意向量除以它的模**得到：
 
 {% mathjax %}\hat{a}=\vec{a} /\left \| \vec{a} \right \|  {% endmathjax %}
 
@@ -166,7 +182,19 @@ references:
 
 ### 1.4 向量相乘
 
+向量相乘主要有两个：**点乘**和**叉乘**
+
+他们的计算结果非常不同：
+
+点乘的结果是一个数字
+
+叉乘的结果是一个向量
+
 #### 1.4.1 点乘
+
+点乘的结果是**向量a的模✖️向量b的模✖️它们的夹角余弦**：
+
+{% mathjax %}\vec{a} \cdot \vec{b} = \left \| \vec{a}  \right \| \left \| \vec{b}  \right \| \cos \theta {% endmathjax %}
 
 点乘会得到一个数字
 
@@ -179,6 +207,10 @@ references:
 ![image-20210626001549261](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001549261.png)
 
 ![image-20210626001910607](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001910607.png)
+
+![image-20210626231407878](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626231407878.png)
+
+
 
 #### 1.4.2 叉乘
 
