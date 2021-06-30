@@ -74,13 +74,13 @@ references:
 
 有两种计算方法，一种是三角形定则，一种是平行四边形定则
 
-### 平行四边形定则
+#### 平行四边形定则
 
 {% image /images/image-20210620220106763.png, width=250px %}
 
 （复制并）平移{% mathjax %}\vec{b} {% endmathjax %}向量，使其起始点与{% mathjax %}\vec{a} {% endmathjax %}向量的末尾点重合，同样（复制并）平移{% mathjax %}\vec{a} {% endmathjax %}向量使其起始点与{% mathjax %}\vec{b} {% endmathjax %}向量的末尾点重合，平移后的两个向量的终点相同，作为{% mathjax %}\vec{c} {% endmathjax %}的终点，原点作为{% mathjax %}\vec{c} {% endmathjax %}的起点。
 
-### 三角形定则
+#### 三角形定则
 
 {% image /images/image-20210620215505221.png, width=250px %}
 
@@ -98,7 +98,7 @@ references:
 
 上图中，只要将{% mathjax %}\vec{a} {% endmathjax %}、{% mathjax %}\vec{b} {% endmathjax %}、{% mathjax %}\vec{c} {% endmathjax %}分别按顺序首尾相连，结果向量{% mathjax %}\vec{d} {% endmathjax %}即为原点指向最后一个向量（{% mathjax %}\vec{c} {% endmathjax %}）的终点的向量
 
-### 数学角度
+#### 数学角度
 
 {% mathjax %}\vec{a} {% endmathjax %} + {% mathjax %}\vec{b} {% endmathjax %} = {% mathjax %}\vec{c} {% endmathjax %}
 
@@ -130,7 +130,7 @@ references:
 
 就是把{% mathjax %}\vec{a}{% endmathjax %}的x与{% mathjax %}\vec{b}{% endmathjax %}的x相加，{% mathjax %}\vec{a}{% endmathjax %}的y与{% mathjax %}\vec{b}{% endmathjax %}的y相加
 
-### 其他规律
+#### 其他规律
 
 矩阵相加**满足结合律也满足交换律**
 
@@ -138,7 +138,7 @@ references:
 
 {% image /images/image-20210620223951728.png, width=250px %}
 
-#### 结合律：
+##### 结合律：
 
 向量相加是满足结合律的：
 
@@ -158,7 +158,7 @@ references:
 
 {% image /images/image-20210620234305526.png, width=250px %}
 
-#### 交换律：
+##### 交换律：
 
 从上面的**三角形定则**可以看出，向量相加可以表示为首尾相连，那么
 
@@ -194,17 +194,45 @@ references:
 
 点乘的结果是**向量a的模✖️向量b的模✖️它们的夹角余弦**：
 
+{% image /images/image-20210627231952782.png, width=250px %}
+
 {% mathjax %}\vec{a} \cdot \vec{b} = \left \| \vec{a}  \right \| \left \| \vec{b}  \right \| \cos \theta {% endmathjax %}
 
-点乘会得到一个数字
+是一个数字，由上述公式可得：
 
-点乘可以计算夹角，进而分解一个向量
+{% mathjax %}\vec{a} \cdot \vec{b} = \left \| \vec{a}  \right \| \left \| \vec{b}  \right \| \cos \theta {% endmathjax %}
 
-![image-20210626001213506](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001213506.png)
+如果{% mathjax %}\vec{a} {% endmathjax %}和{% mathjax %}\vec{b} {% endmathjax %}是单位向量，那么则有：
 
-![image-20210626001512332](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001512332.png)
+{% mathjax %} \cos \theta = \hat{a}\cdot \hat{b} {% endmathjax %}
 
-![image-20210626001549261](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001549261.png)
+#### 1.4.2 点乘的矩阵计算
+
+2D:
+
+{% mathjax %} \vec{a}\cdot\vec{b}=\begin{pmatrix}x_{a} \\ y_{a}\end{pmatrix}\cdot\begin{pmatrix}x_{b} \\ y_{b}\end{pmatrix}=x_{a}x_{b}+y_{a}y_{b} {% endmathjax %}
+
+3D:
+
+{% mathjax %} \vec{a}\cdot\vec{b}\cdot\vec{c}=\begin{pmatrix}x_{a} \\ y_{a}\\ z_{a}\end{pmatrix}\cdot\begin{pmatrix}x_{b} \\ y_{b} \\ z_{b}\end{pmatrix}=x_{a}x_{b}+y_{a}y_{b}+z_{a}z_{b} {% endmathjax %}
+
+#### 1.4.3 交换律、结合律和分配率
+
+点乘因为结果都是纯数字计算，因此可满足：
+
+**交换律**
+
+{% mathjax %} \vec{a}\cdot \vec{b}=\vec{b}\cdot \vec{a} {% endmathjax %}
+
+**分配率**
+
+{% mathjax %} \vec{a}\cdot( \vec{b}+\vec{c})=\vec{a}\cdot \vec{b}+\vec{a}\cdot \vec{c} {% endmathjax %}
+
+ **结合律**
+
+{% mathjax %} (k\vec{a}) \cdot\vec{b}=\vec{a}\cdot (k\vec{b})=k(\vec{a}\cdot\vec{b}) {% endmathjax %}
+
+结合律由于两个向量点乘的结果不是向量，所以用常量{% mathjax %} k {% endmathjax %}代替
 
 ![image-20210626001910607](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001910607.png)
 
