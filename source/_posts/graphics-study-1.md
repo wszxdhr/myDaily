@@ -234,7 +234,19 @@ references:
 
 结合律由于两个向量点乘的结果不是向量，所以用常量{% mathjax %} k {% endmathjax %}代替
 
-![image-20210626001910607](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626001910607.png)
+如果想知道一个向量在另一个向量上的投影长度，也可以用点乘来计算：
+
+{% mathjax %} \vec{b} _{\bot } = k\hat{a}  {% endmathjax %}
+
+其中{% mathjax %} \hat{a}  {% endmathjax %}是{% mathjax %} \vec{a}  {% endmathjax %}的单位向量，
+
+{% mathjax %} k  {% endmathjax %}为投影长度
+
+则有：
+
+{% mathjax %} k=\left \| \vec{b} _{\bot }  \right \| =\left \| \vec{b} \right \| \cos \theta  {% endmathjax %}
+
+{% image /images/image-20210701000539907.png, width=250px %}
 
 ![image-20210626231407878](/Users/zhangxiao/Library/Application Support/typora-user-images/image-20210626231407878.png)
 
