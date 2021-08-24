@@ -1,6 +1,6 @@
 {
   "name": "zhangxiao-blog",
-  "version": "2.0.0",
+  "version": "2.0.0-push-test",
   "private": true,
   "scripts": {
     "dev": "hexo clean && nodemon --exec \"hexo server\" --watch ./_config.yml --watch ./_config.volantis.yml",
