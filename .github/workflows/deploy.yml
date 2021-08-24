@@ -39,6 +39,7 @@ jobs:
       - run: npm run deploy:qiniu -- --ak ${{ secrets.ACCESS_KEY }} --sk ${{ secrets.SECRET_KEY }}
         env:
           CI: true
+
       # 发布到GitHub Pages
 #      - name: Deploy
 #        uses: JamesIves/github-pages-deploy-action@releases/v3
