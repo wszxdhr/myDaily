@@ -97,7 +97,7 @@ B=\begin{bmatrix}
 
 矩阵在图形学中有特别多的应用，我们先以2D切入，然后再说3D的
 
-### 缩放矩阵
+### 缩放矩阵（Scale Matrix）
 
 {% image /images/35095c5b16fe6b3887538d3da037831a.png, width=500px %}
 
@@ -124,3 +124,65 @@ y
 \end{bmatrix}
 
  {% endmathjax %}
+
+那么如果我保持高度不变，只改变宽度的大小呢：
+
+{% image /images/df4b8a15c9dc7978faef46f9482fdf01.png, width=500px %}
+
+缩放这个小人的宽度（x）为之前的一半（0.5倍），高度（y）保持相同，那么依然是：
+
+<p>{% mathjax %} x'=sx {% endmathjax %}</p>
+
+<p>{% mathjax %} y'=sy {% endmathjax %}</p>
+
+写成矩阵形式：
+
+{% mathjax %} 
+
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix}=
+\begin{bmatrix}
+ s_{x}  & 0\\
+ 0 & s_{x}
+\end{bmatrix}\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+
+ {% endmathjax %}
+
+所以缩放矩阵的{% mathjax %} s_{x} {% endmathjax %}和{% mathjax %} s_{y} {% endmathjax %}可以不相等，甚至也可以是负数。如都为-1的情况下图像就会出现在第三象限
+
+### 旋转矩阵（Rotation Matrix）
+
+{% image /images/d2a55575e78d9f08d7fcbbec5f9c0045.png, width=500px %}
+
+这张图相当于绕y轴旋转180度，缩放后的x和y：
+
+<p>{% mathjax %} x'=-x {% endmathjax %}</p>
+
+<p>{% mathjax %} y'=y {% endmathjax %}</p>
+
+写成矩阵形式：
+
+{% mathjax %} 
+
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix}=
+\begin{bmatrix}
+ -1  & 0\\
+ 0 & 1
+\end{bmatrix}\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+
+{% endmathjax %}
+
+### 剪切矩阵（Shear Matrix）
+
+{% image /images/596fa44510a8120245f2d40b1a3b4f2d.png, width=500px %}
