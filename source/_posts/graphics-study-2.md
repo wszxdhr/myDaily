@@ -186,3 +186,23 @@ y
 ### 剪切矩阵（Shear Matrix）
 
 {% image /images/596fa44510a8120245f2d40b1a3b4f2d.png, width=500px %}
+
+也就是说，当{% mathjax %} y = 1 {% endmathjax %}时，右上角的点变为{% mathjax %} x = a + 1 {% endmathjax %}，左上角的点变为{% mathjax %} x=a {% endmathjax %}，当{% mathjax %} y = 0 {% endmathjax %}时，左下角的点变为{% mathjax %} x=0 {% endmathjax %}，右下角的点变为{% mathjax %} x=1 {% endmathjax %}。
+
+所以矩阵表示为：
+
+{% mathjax %} 
+
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix}=
+\begin{bmatrix}
+ 1  & a\\
+ 0 & 1
+\end{bmatrix}\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+
+{% endmathjax %}
