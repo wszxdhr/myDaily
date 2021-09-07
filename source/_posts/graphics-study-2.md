@@ -155,7 +155,7 @@ y
 
 所以缩放矩阵的{% mathjax %} s_{x} {% endmathjax %}和{% mathjax %} s_{y} {% endmathjax %}可以不相等，甚至也可以是负数。如都为-1的情况下图像就会出现在第三象限
 
-### 旋转矩阵（Rotation Matrix）
+### 旋转矩阵（绕某条线旋转）（Rotation Matrix）
 
 {% image /images/d2a55575e78d9f08d7fcbbec5f9c0045.png, width=500px %}
 
@@ -206,3 +206,192 @@ y
 \end{bmatrix}
 
 {% endmathjax %}
+
+从上面的矩阵也可以得出：
+
+{% mathjax %} x'=x+ay {% endmathjax %}
+
+### 旋转矩阵（绕某个点旋转）（Rotation Matrix）
+
+{% image /images/c0ab6657f44c157211d964112540de56.png, width=500px %}
+
+**首先要定义一个事情，就是默认旋转都是绕原点（[0, 0]点）旋转，逆时针旋转为正。**
+
+旋转矩阵长这样：
+
+{% mathjax %} 
+
+R_{\theta } =
+\begin{bmatrix}
+ \cos \theta & -\sin \theta\\
+ \sin \theta & \cos \theta
+\end{bmatrix} 
+
+{% endmathjax %}
+
+这个{% mathjax %} \theta {% endmathjax %}是表示图形旋转角度（逆时针为正），如图：
+
+{% image /images/53ade7ae0af7d94da376f3cd7ac4d992.png, width=500px %}
+
+下面我们来简单（取巧）地推导一下这个旋转矩阵公式（主要用于方便记忆）：
+
+首先我们假设矩形的大小：长为1，宽为1，如图所示：
+
+{% image /images/53ade7ae0af7d94da376f3cd7ac4d992.png, width=500px %}
+
+那么在**旋转前**：
+
+蓝色的点的坐标为：( 1, 0 )
+
+红色的点的坐标为：( 0, 1 )
+
+**旋转后**：
+
+蓝色的点到原点的距离为原矩形的**高**（1），利用三角函数公式得到：
+
+蓝色的点的坐标为：( {% mathjax %} -\sin \theta {% endmathjax %}, {% mathjax %} \cos \theta {% endmathjax %} )
+
+红色的点到原点的距离为原矩形的**宽**（1），利用三角函数公式得到：
+
+红色的点的坐标为：( {% mathjax %} \cos \theta {% endmathjax %}, {% mathjax %} \sin \theta {% endmathjax %} )
+
+那么就有：
+
+{% mathjax %}
+
+(x,y)\Rightarrow (x',y')
+
+{% endmathjax %}
+
+矩阵形式表示：
+
+{% mathjax %}
+
+\begin{bmatrix}
+x' \\ y'
+
+\end{bmatrix}=\begin{bmatrix}
+ {\Box }  & {\Box }\\
+ {\Box } & {\Box }
+\end{bmatrix}\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+
+{% endmathjax %}
+
+中间的带方块的2x2矩阵就是我们要求的旋转矩阵
+
+我们给矩阵填一个变量，记为：
+
+{% mathjax %}
+
+\begin{bmatrix}
+x' \\ y'
+
+\end{bmatrix}=\begin{bmatrix}
+ A  & B\\
+ C & D
+\end{bmatrix}\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+
+{% endmathjax %}
+
+那么代入上面红色的点{% mathjax %}(1,0)\Rightarrow (\cos \theta,\sin \theta){% endmathjax %}：
+
+{% mathjax %}
+
+\begin{bmatrix}
+\cos \theta \\ \sin \theta
+
+\end{bmatrix}=\begin{bmatrix}
+ A  & B\\
+ C & D
+\end{bmatrix}\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}
+
+{% endmathjax %}
+
+利用矩阵相乘可得：
+
+{% mathjax %}
+
+\left\{\begin{matrix}
+\cos \theta = A \cdot 1 + B \cdot 0 = A \\
+\sin \theta = C \cdot 1 + D \cdot 0 = C
+\end{matrix}\right.
+
+{% endmathjax %}
+
+也就是：
+
+{% mathjax %}
+
+\left\{\begin{matrix}
+A=\cos \theta \\
+C=\sin \theta
+\end{matrix}\right.
+
+{% endmathjax %}
+
+同理从蓝色的点可得：
+
+{% mathjax %}
+
+\begin{bmatrix}
+-\sin \theta \\ \cos \theta
+
+\end{bmatrix}=\begin{bmatrix}
+ A  & B\\
+ C & D
+\end{bmatrix}\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}
+
+{% endmathjax %}
+
+可得：
+
+{% mathjax %}
+
+\left\{\begin{matrix}
+-\sin \theta = A \cdot 0 + B \cdot 1 = B \\
+\cos \theta = C \cdot 0 + D \cdot 1 = D
+\end{matrix}\right.
+
+{% endmathjax %}
+
+也就是：
+
+{% mathjax %}
+
+\left\{\begin{matrix}
+B=-\sin \theta \\
+D=\cos \theta
+\end{matrix}\right.
+
+{% endmathjax %}
+
+把{% mathjax %}ABCD{% endmathjax %}同时代进矩阵：
+
+{% mathjax %}
+
+\begin{bmatrix}
+A  & B\\
+C  & D
+\end{bmatrix}=\begin{bmatrix}
+ \cos \theta & -\sin \theta\\
+ \sin \theta & \cos \theta
+\end{bmatrix}
+
+{% endmathjax %}
+
+也就是旋转矩阵了
+
+### 线性变换（Linear Transforms）
+
