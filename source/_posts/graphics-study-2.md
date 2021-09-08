@@ -4,12 +4,16 @@ date: 2021-07-04 21:27:33
 tags: [图形学,线性代数,矩阵]
 categories: [图形学]
 references:
-  - title: 《GAMES101-现代计算机图形学入门-闫令琪》
+  - title: 《GAMES101-现代计算机图形学入门 - 闫令琪》
     url: https://www.bilibili.com/video/BV1X7411F744
   - title: 《矩阵 - 维基百科》
     url: https://zh.wikipedia.org/wiki/%E7%9F%A9%E9%98%B5
   - title: 《矩阵乘法 - 百度百科》
     url: https://baike.baidu.com/item/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/5446029
+  - title: 《线性代数的本质 - 03 - 矩阵与线性变换 - 3Blue1Brown》
+    url: https://www.bilibili.com/video/BV1ns41167b9?from=search&seid=12106414102479361333&spm_id_from=333.337.0.0
+  - title: 《线性变换 - 百度百科》
+    url: https://baike.baidu.com/item/%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2/5904192
 ---
 
 这篇文章继续上一次的文章，上一回讲到线性代数中的向量，向量是一个表示方向，起点为原点，且具有模（长度）的一个“箭头”。
@@ -394,4 +398,34 @@ C  & D
 也就是旋转矩阵了
 
 ### 线性变换（Linear Transforms）
+
+首先简单解释下啥是线性变换：
+
+来个百度百科版本：
+
+> 线性映射（ linear mapping）是从一个[向量空间](https://baike.baidu.com/item/向量空间/5936597)V到另一个向量空间W的映射且保持[加法运算](https://baike.baidu.com/item/加法运算/18994540)和数量乘法运算，而线性变换（linear transformation）是线性空间V到其自身的线性映射。 
+
+线性变换的特点：
+
+线性空间{% mathjax %}V {% endmathjax %}上的一个变换{% mathjax %} A {% endmathjax %}称为线性变换，对于{% mathjax %} V {% endmathjax %}中任意的元素{% mathjax %} \alpha {% endmathjax %}，{% mathjax %} \beta {% endmathjax %}和数域{% mathjax %} P {% endmathjax %}中任意{% mathjax %} k {% endmathjax %}，都有
+
+{% mathjax %} 
+
+\begin{cases}
+A(\alpha + \beta)=A(\alpha)+A(\beta) \\
+
+A(k\alpha )=kA(\alpha)
+
+\end{cases}
+
+ {% endmathjax %}
+
+上面讲的比较抽象，我刚开始看的也有点蒙，所以我就去著名学习网站（Bilibili）查询了视频（视频链接见参考资料），得（剽）出（窃）：
+
+线性变换的特点（形象版）：
+
+1. 变换前后的原点相同
+2. 任何直线在变换后都还是直线
+
+另外那个**3Blue1Brown**老师讲的真的好，非常形象，非常推荐看看
 
