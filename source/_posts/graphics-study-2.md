@@ -14,6 +14,8 @@ references:
     url: https://www.bilibili.com/video/BV1ns41167b9?from=search&seid=12106414102479361333&spm_id_from=333.337.0.0
   - title: 《线性变换 - 百度百科》
     url: https://baike.baidu.com/item/%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2/5904192
+  - title: 《仿射变换 - 维基百科》
+    url: https://zh.wikipedia.org/wiki/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2
 ---
 
 这篇文章继续上一次的文章，上一回讲到线性代数中的向量，向量是一个表示方向，起点为原点，且具有模（长度）的一个“箭头”。
@@ -420,7 +422,7 @@ A(k\alpha )=kA(\alpha)
 
  {% endmathjax %}
 
-上面讲的比较抽象，我刚开始看的也有点蒙，所以我就去著名学习网站（Bilibili）查询了视频（视频链接见参考资料），得（剽）出（窃）：
+上面讲的比较抽象，我刚开始看的也有点蒙，所以我就去著名学习网站（Bilibili）查询了视频（视频链接见参考资料），从**3Blue1Brown**老师的视频中得（剽）出（窃）：
 
 线性变换的特点（形象版）：
 
@@ -429,3 +431,264 @@ A(k\alpha )=kA(\alpha)
 
 另外那个**3Blue1Brown**老师讲的真的好，非常形象，非常推荐看看
 
+那么进入正题，线性变换怎么用数学方法表示呢？
+
+{% mathjax %} 
+
+\begin{cases}
+x'=ax+by \\
+
+y'=cx+dy
+
+\end{cases}
+
+ {% endmathjax %}
+
+矩阵表示：
+
+{% mathjax %} 
+
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix}
+=
+\begin{bmatrix}
+a  & b\\
+c  & d
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+
+ {% endmathjax %}
+
+简写：
+
+{% mathjax %} 
+
+x'=Mx
+
+ {% endmathjax %}
+
+### 齐次坐标（Homogeneous Coordinates）
+
+在提出齐次坐标之前，我们先弄清楚为什么需要齐次坐标
+
+首先来看这个基础的平移操作：
+
+{% image /images/7a34577d42caed839242f5450f4fe5e5.png, width=500px %}
+
+用公式来表达这个平移：
+
+{% mathjax %} 
+
+\begin{cases}
+x'=x+t_{x} \\
+
+y'=y+t_{y}
+
+\end{cases}
+
+ {% endmathjax %}
+
+那么，这种变换要怎么写成矩阵呢？
+
+答案是：写不出来
+
+**因为平移变换不是线性变换**
+
+这种如果硬写成矩阵形式，那也只能写成：
+
+{% mathjax %} 
+
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix}
+=
+\begin{bmatrix}
+a  & b \\
+c  & d
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
++
+\begin{bmatrix}
+t_{x} \\
+t_{y}
+\end{bmatrix}
+
+ {% endmathjax %}
+
+前面这个等式，右边的{% mathjax %} 
++
+\begin{bmatrix}
+t_{x} \\
+t_{y}
+\end{bmatrix}
+
+ {% endmathjax %}是去不掉的，因为没有它的话，不论怎么算，都只能得到多少x+多少y的形式，
+
+那咋整呢？
+
+好在有聪明的前辈发明了
+
+**齐次坐标**
+
+棒
+
+齐次坐标的做法是：把坐标升一个维度
+
+那2D下的**点**就变为：
+
+{% mathjax %}
+
+(x,y,\mathbf{1})^{T}
+
+{% endmathjax %}
+
+2D下的**向量**变为：
+
+{% mathjax %}
+
+(x,y,\mathbf{0})^{T}
+
+{% endmathjax %}
+
+那么首先点和向量的齐次坐标区别就在最后一行的{% mathjax %}w{% endmathjax %}，点的是1，向量的是0，为啥呢？那么请看2D下**点**的**平移矩阵**：
+
+{% mathjax %}
+
+\begin{bmatrix}
+x' \\
+y' \\
+w'
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & t_{x} \\
+0 & 1 & t_{y} \\
+0 & 0 & 1
+\end{bmatrix}
+\cdot 
+\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+x + t_{x} \\
+y + t_{y} \\
+1
+\end{bmatrix}
+
+{% endmathjax %}
+
+再看2D下的**向量**的**平移矩阵**：
+
+{% mathjax %}
+
+\begin{bmatrix}
+x' \\
+y' \\
+w'
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & t_{x} \\
+0 & 1 & t_{y} \\
+0 & 0 & 1
+\end{bmatrix}
+\cdot 
+\begin{bmatrix}
+x \\
+y \\
+0
+\end{bmatrix}
+=
+\begin{bmatrix}
+x \\
+y \\
+0
+\end{bmatrix}
+
+{% endmathjax %}
+
+这样你就会发现：
+
+**点平移后有平移效果，向量无论怎么应用平移矩阵，都没有平移效果，因为向量的起点永远为原点，具有平移不变性**
+
+那这不就巧了吗，实际上就是想要这个效果啊！
+
+那么就有如下规律：
+
+- vector + vector = vector ( 0 + 0 = 0 )
+- point - point = vector ( 1 - 1 = 0 )
+- point + vector = point ( 1 + 0 = 1 )
+- point + point = ??
+
+那两个点相加，1 + 1 = 2了，咋办？
+
+业界有一个普遍的计算方法，就是如果w ≠ 0时，最终的x和y以及w本身（以及3D下的z），都要除以w，使最终w变回1
+
+所以再回头看一眼，point + point，显然是指它们之间的中点了
+
+### 仿射变换（Affine Transformations）
+
+> 仿射变换（Affine transformation），又称仿射映射，是指在几何中，对一个向量空间进行一次线性变换并接上一个平移，变换为另一个向量空间。
+> ——维基百科
+
+公式表示（**2D下**）：
+
+{% mathjax %}
+
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix}
+=
+\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}
+\cdot 
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
++
+\begin{bmatrix}
+t_{x} \\
+t_{y}
+\end{bmatrix}
+
+{% endmathjax %}
+
+用齐次方程表示：
+
+{% mathjax %}
+
+\begin{bmatrix}
+x' \\
+y' \\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+a & b & t_{x} \\
+c & d & t_{y} \\
+0 & 0 & 1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix}
+
+{% endmathjax %}
