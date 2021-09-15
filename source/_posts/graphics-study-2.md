@@ -16,6 +16,8 @@ references:
     url: https://baike.baidu.com/item/%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2/5904192
   - title: 《仿射变换 - 维基百科》
     url: https://zh.wikipedia.org/wiki/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2
+  - title: 《逆矩阵 - 百度百科》
+    url: https://baike.baidu.com/item/%E9%80%86%E7%9F%A9%E9%98%B5/10481136
 ---
 
 这篇文章继续上一次的文章，上一回讲到线性代数中的向量，向量是一个表示方向，起点为原点，且具有模（长度）的一个“箭头”。
@@ -692,3 +694,78 @@ y \\
 \end{bmatrix}
 
 {% endmathjax %}
+
+### 齐次坐标下的2D变换
+
+#### 缩放（Scale）
+
+{% mathjax %}
+
+S(s_{x},s_{y})
+
+=
+
+\begin{bmatrix}
+
+s_{x} & 0 & 0 \\
+
+0 & s_{y} & 0 \\
+
+0 & 0 & 1
+
+\end{bmatrix}
+
+{% endmathjax %}
+
+#### 旋转（Rotation）
+
+{% mathjax %}
+
+R(\alpha)
+
+=
+
+\begin{bmatrix}
+
+\cos\alpha & -\sin\alpha & 0 \\
+
+\sin\alpha & \cos\alpha & 0 \\
+
+0 & 0 & 1
+
+\end{bmatrix}
+
+{% endmathjax %}
+
+#### 平移（Translation）
+
+{% mathjax %}
+
+T(t_{x}, t_{y})
+
+=
+
+\begin{bmatrix}
+
+1 & 0 & t_{x} \\
+
+0 & 1 & t_{y} \\
+
+0 & 0 & 1
+
+\end{bmatrix}
+
+{% endmathjax %}
+
+### 逆变换和逆矩阵（{% mathjax %}M^{-1}{% endmathjax %}）
+
+> 设A是一个n阶矩阵，若存在另一个n阶矩阵B，使得： AB=BA=E ，则称方阵A可逆，并称方阵B是A的逆矩阵
+>
+> ——百度百科
+
+{% image /images/3ad564faed0d50314bdf7760d06759e0.png, width=500px %}
+
+{% image /images/e46119767381e3ad4a525fa20a8a14f4.png, width=500px %}
+
+{% mathjax %}M^{-1}{% endmathjax %}是{% mathjax %}M{% endmathjax %}矩阵的逆矩阵
+
