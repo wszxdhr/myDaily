@@ -757,15 +757,31 @@ T(t_{x}, t_{y})
 
 {% endmathjax %}
 
-### 逆变换和逆矩阵（{% mathjax %}M^{-1}{% endmathjax %}）
+### 逆变换（Inverse Transform）和逆矩阵（Inverse Matrix）（{% mathjax %}M^{-1}{% endmathjax %}）
 
 > 设A是一个n阶矩阵，若存在另一个n阶矩阵B，使得： AB=BA=E ，则称方阵A可逆，并称方阵B是A的逆矩阵
 >
 > ——百度百科
+
+实际上就是把一个变换的操作反过来
 
 {% image /images/3ad564faed0d50314bdf7760d06759e0.png, width=500px %}
 
 {% image /images/e46119767381e3ad4a525fa20a8a14f4.png, width=500px %}
 
 {% mathjax %}M^{-1}{% endmathjax %}是{% mathjax %}M{% endmathjax %}矩阵的逆矩阵
+
+### 先旋转还是先平移？
+
+假设我想做一个这样的变换：
+
+{% image /images/c68de569e5452630de6ead8376b83baf.png, width=500px %}
+
+如果我先平移再旋转：
+
+{% image /images/010fca106c20ce65a28607e21dd4560.png, width=500px %}
+
+如果先旋转再平移：
+
+{% image /images/6332c7cdd02099f12db2f18a1beb2848.png, width=500px %}
 
