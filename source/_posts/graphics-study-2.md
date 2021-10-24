@@ -785,3 +785,95 @@ T(t_{x}, t_{y})
 
 {% image /images/6332c7cdd02099f12db2f18a1beb2848.png, width=500px %}
 
+可以看出，这两种旋转的结果不同。
+
+因为矩阵相乘是不满足交换律的，{% mathjax %}R_{45}\cdot T_{(1,0)}\ne T_{(1,0)}\cdot R_{45}{% endmathjax %}
+
+所以我们需要按顺序应用矩阵。不过，其实，不管先平移再旋转，还是先旋转再平移，都可以通过某种不同的系数得到相同的结果。
+
+但是，我们现在讨论的矩阵运算，是由先旋转再平移得来的，如：
+
+{% mathjax %}T_{(1,0)}\cdot R_{45}\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 1 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}\begin{bmatrix}
+\cos 45^{\circ } & -\sin 45^{\circ } & 0 \\
+\sin 45^{\circ } & \cos 45^{\circ } & 0 \\
+0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}
+x  \\
+y  \\
+1  \end{bmatrix}{% endmathjax %}
+
+我们来看下这个运算式：
+
+首先矩阵是从右往左相乘（左乘）的，所以第一步，先计算{% mathjax %}\begin{bmatrix}
+\cos 45^{\circ } & -\sin 45^{\circ } & 0 \\
+\sin 45^{\circ } & \cos 45^{\circ } & 0 \\
+0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}
+x  \\
+y  \\
+1  \end{bmatrix}{% endmathjax %}
+
+相当于对图像旋转45度（逆时针）
+
+再用这个结果左乘向量{% mathjax %}\begin{bmatrix}
+1 & 0 & 1 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}{% endmathjax %}
+
+这一步可以看到是应用了单位向量（没有缩放）的基础上添加了x方向偏移1的矩阵。
+
+### 组合变换（Composing Transforms）
+
+这里朋友们应该想起来了，矩阵乘法是满足结合律的，所以就有：
+
+{% mathjax %}T_{(1,0)}\cdot R_{45}\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix} = (T_{(1,0)}\cdot R_{45})\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix} {% endmathjax %}
+
+那么我们再抽象一下：
+
+一个向量按顺序依次应用多个矩阵，可以将这些矩阵先相乘，再应用到向量：
+
+{% mathjax %} A_{n}(...A_{2}(A_{1}(x))) = A_{n}\cdot\cdot\cdot A_{2}\cdot A_{1}\cdot \begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix}=(A_{n}\cdot\cdot\cdot A_{2}\cdot A_{1})\cdot \begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix}{% endmathjax %}
+
+### 分解复杂的变换（Decomposing Complex Transforms）
+
+我们如何才能围绕一个不是原点的点旋转一个图形呢？
+
+首先我们默认一个图形的旋转矩阵，都是沿原点旋转的，那么当这个图形已经发生了平移，就不能直接套用这个旋转矩阵了，需要先平移图形的所有的点（包括旋转点），使旋转点与原点重合。
+
+然后对图形进行旋转，最后再按照原来的平移的逆矩阵再把图形平移回去。
+
+如图：
+
+{% image /images/752f60f7c7163f46b5d89cc5728d219b.png, width=500px %}
+
+{% mathjax %}\begin{align}
+T(c)\cdot R(\alpha )\cdot T(-c)
+\end{align}{% endmathjax %}
+
+
+
