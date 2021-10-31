@@ -875,5 +875,50 @@ y \\
 T(c)\cdot R(\alpha )\cdot T(-c)
 \end{align}{% endmathjax %}
 
+### 3D下的变换
 
+其实只要把2D下的变换类比到3D下就可以了：
 
+3D下的点：{% mathjax %}
+
+\begin{bmatrix}
+x  & y & z & 1
+\end{bmatrix}^{T}
+
+{% endmathjax %}
+
+3D下的向量：{% mathjax %}
+
+\begin{bmatrix}
+x  & y & z & 0
+\end{bmatrix}^{T}
+
+{% endmathjax %}
+
+以上依然是一行三列的矩阵，加上最后一位w形成其次坐标，与2D下同理
+
+因此3D下的点在w不等于1时依然把x、y、z、w同时除以w，使w最终归为1
+
+3D下的平移同理：
+
+{% mathjax %}
+
+\begin{bmatrix}
+ x' \\ y' \\ z' \\ 1
+\end{bmatrix}=\begin{bmatrix}
+ a & b & c & t_{x}\\
+ d & e & f & t_{y}\\
+ g & h & i & t_{z}\\
+ 0 & 0 & 0 & 1
+\end{bmatrix}\cdot \begin{bmatrix}
+x \\
+y \\
+z \\
+1
+\end{bmatrix}
+
+{% endmathjax %}
+
+其中4x4矩阵中，左上角的3x3矩阵就是3D下的线性变换矩阵
+
+其他的应用顺序都和2D下相同
