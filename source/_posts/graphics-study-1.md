@@ -5,7 +5,7 @@ tags: [图形学,线性代数]
 categories: [图形学]
 references:
   - title: 《GAMES101-现代计算机图形学入门-闫令琪》
-    url: https://www.bilibili.com/video/BV1X7411F744?from=search&seid=14302378529290805252
+    url: https://www.bilibili.com/video/BV1X7411F744
   - title: 《向量 - 维基百科》
     url: https://zh.wikipedia.org/wiki/%E5%90%91%E9%87%8F
   - title: 《右手定则》
