@@ -32,7 +32,7 @@ references:
 
 从白话上讲，矩阵就是一个能排成矩形的数（一堆数），大概长这样：
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{bmatrix}
  1 & 2 & 3 & 4\\
@@ -59,14 +59,14 @@ references:
 
 假设：
 
-<p>{% mathjax %} 
+<p>{% mathjax %}
 A=\begin{bmatrix}
  a_{1,1}  & a_{1,2} & a_{1,3}\\
  a_{2,1} & a_{2,2} & a_{2,3}
 \end{bmatrix}
 {% endmathjax %}</p>
 
-<p>{% mathjax %} 
+<p>{% mathjax %}
 B=\begin{bmatrix}
  b_{1,1}  & b_{1,2}\\
  b_{2,1} & b_{2,2}\\
@@ -117,7 +117,7 @@ B=\begin{bmatrix}
 
 那么写成矩阵形式：
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{bmatrix}
 x' \\
@@ -145,7 +145,7 @@ y
 
 写成矩阵形式：
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{bmatrix}
 x' \\
@@ -153,7 +153,7 @@ y'
 \end{bmatrix}=
 \begin{bmatrix}
  s_{x}  & 0\\
- 0 & s_{x}
+ 0 & s_{y}
 \end{bmatrix}\begin{bmatrix}
 x \\
 y
@@ -175,7 +175,7 @@ y
 
 写成矩阵形式：
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{bmatrix}
 x' \\
@@ -199,7 +199,7 @@ y
 
 所以矩阵表示为：
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{bmatrix}
 x' \\
@@ -227,13 +227,13 @@ y
 
 旋转矩阵长这样：
 
-{% mathjax %} 
+{% mathjax %}
 
 R_{\theta } =
 \begin{bmatrix}
  \cos \theta & -\sin \theta\\
  \sin \theta & \cos \theta
-\end{bmatrix} 
+\end{bmatrix}
 
 {% endmathjax %}
 
@@ -407,13 +407,13 @@ C  & D
 
 来个百度百科版本：
 
-> 线性映射（ linear mapping）是从一个[向量空间](https://baike.baidu.com/item/向量空间/5936597)V到另一个向量空间W的映射且保持[加法运算](https://baike.baidu.com/item/加法运算/18994540)和数量乘法运算，而线性变换（linear transformation）是线性空间V到其自身的线性映射。 
+> 线性映射（ linear mapping）是从一个[向量空间](https://baike.baidu.com/item/向量空间/5936597)V到另一个向量空间W的映射且保持[加法运算](https://baike.baidu.com/item/加法运算/18994540)和数量乘法运算，而线性变换（linear transformation）是线性空间V到其自身的线性映射。
 
 线性变换的特点：
 
 线性空间{% mathjax %}V {% endmathjax %}上的一个变换{% mathjax %} A {% endmathjax %}称为线性变换，对于{% mathjax %} V {% endmathjax %}中任意的元素{% mathjax %} \alpha {% endmathjax %}，{% mathjax %} \beta {% endmathjax %}和数域{% mathjax %} P {% endmathjax %}中任意{% mathjax %} k {% endmathjax %}，都有
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{cases}
 A(\alpha + \beta)=A(\alpha)+A(\beta) \\
@@ -435,7 +435,7 @@ A(k\alpha )=kA(\alpha)
 
 那么进入正题，线性变换怎么用数学方法表示呢？
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{cases}
 x'=ax+by \\
@@ -448,7 +448,7 @@ y'=cx+dy
 
 矩阵表示：
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{bmatrix}
 x' \\
@@ -468,7 +468,7 @@ y
 
 简写：
 
-{% mathjax %} 
+{% mathjax %}
 
 x'=Mx
 
@@ -484,7 +484,7 @@ x'=Mx
 
 用公式来表达这个平移：
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{cases}
 x'=x+t_{x} \\
@@ -503,7 +503,7 @@ y'=y+t_{y}
 
 这种如果硬写成矩阵形式，那也只能写成：
 
-{% mathjax %} 
+{% mathjax %}
 
 \begin{bmatrix}
 x' \\
@@ -526,7 +526,7 @@ t_{y}
 
  {% endmathjax %}
 
-前面这个等式，右边的{% mathjax %} 
+前面这个等式，右边的{% mathjax %}
 +
 \begin{bmatrix}
 t_{x} \\
@@ -576,7 +576,7 @@ w'
 0 & 1 & t_{y} \\
 0 & 0 & 1
 \end{bmatrix}
-\cdot 
+\cdot
 \begin{bmatrix}
 x \\
 y \\
@@ -606,7 +606,7 @@ w'
 0 & 1 & t_{y} \\
 0 & 0 & 1
 \end{bmatrix}
-\cdot 
+\cdot
 \begin{bmatrix}
 x \\
 y \\
@@ -658,7 +658,7 @@ y'
 a & b \\
 c & d
 \end{bmatrix}
-\cdot 
+\cdot
 \begin{bmatrix}
 x \\
 y
@@ -800,7 +800,7 @@ y \\
 \end{bmatrix} = \begin{bmatrix}
 1 & 0 & 1 \\
 0 & 1 & 0 \\
-0 & 0 & 1 
+0 & 0 & 1
 \end{bmatrix}\begin{bmatrix}
 \cos 45^{\circ } & -\sin 45^{\circ } & 0 \\
 \sin 45^{\circ } & \cos 45^{\circ } & 0 \\
@@ -826,7 +826,7 @@ y  \\
 再用这个结果左乘向量{% mathjax %}\begin{bmatrix}
 1 & 0 & 1 \\
 0 & 1 & 0 \\
-0 & 0 & 1 
+0 & 0 & 1
 \end{bmatrix}{% endmathjax %}
 
 这一步可以看到是应用了单位向量（没有缩放）的基础上添加了x方向偏移1的矩阵。
