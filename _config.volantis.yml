@@ -390,7 +390,7 @@ sidebar:
 
 site_footer:
   layout: [social, license, copyright]
-  copyright: '[Copyright © 2020-2021 张潇](https://张潇.com) [黑ICP备17005381号-1](http://beian.miit.gov.cn/) [浙公安备 33010502004433](http://www.beian.gov.cn/portal/registerSystemInfo)'
+  copyright: '[Copyright © 2020-2022 张潇](https://张潇.com) [黑ICP备17005381号-1](http://beian.miit.gov.cn/) [浙公安备 33010502004433](http://www.beian.gov.cn/portal/registerSystemInfo)'
   social:
     - url: 'https://github.com/wszxdhr'
       icon: fab fa-github
