@@ -7,7 +7,11 @@ tags: [命令行工具]
 
 每次重装系统都要找相同的资料，而且最近重装次数出奇的多，本着程序员不做重复工作的思想，肯定是要记录下的
 
-<img src="/images/record_terminal_plugins/banner.png" height="250px"/>
+{% gallery stretch %}
+
+  <img src="/images/record_terminal_plugins/banner.png" style="max-height: 300px"/>
+
+{% endgallery %}
 
 <!-- more -->
 
