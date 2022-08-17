@@ -5,6 +5,11 @@ tags: [部署,GitLab,CI脚本,Docker,DevOps]
 categories: [学习和实践笔记]
 ---
 
+最近因为要自己私有化代码，而GitHub的私有化又反复横跳，怕以后又会收费，就干脆自己搞一个
+
+总体来说不是很难，但是有些东西就是很难查到，特别是GitLab配置的一些杂项，以及配合群晖LDAP服务的操作
+
+我对自己Google CV能力还是有信心的，所以说明有些资料要不是太老，要不就干脆不对劲，所以就有了这篇文章
 
 <!-- more -->
 
@@ -22,7 +27,7 @@ categories: [学习和实践笔记]
 
 1. `gitlab_rails['gitlab_shell_ssh_port'] = 2222`
    配置ssh的端口
-2. `external_url 'https://你的Gitlab域名:8443'`
+2. `external_url 'https://你的Gitlab域名:端口'`
    配置外部连接用的url，也是clone时候显示的那个https的url
 3. `gitlab_rails['ldap_enabled'] = true`
    打开LDAP
