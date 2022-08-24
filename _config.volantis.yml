@@ -3,13 +3,13 @@ custom_css:
   max_width: 1280px # Sum of body width and sidebar width
   cursor:
     enable: true
-    text: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/text.png
-    pointer: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png
-    default: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/left_ptr.png
-    not-allowed: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/circle.png
-    zoom-out: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/zoom-out.png
-    zoom-in: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/zoom-in.png
-    grab: https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/openhand.png
+    text: https://blog-file.anymelon.com/assets/text.png
+    pointer: https://blog-file.anymelon.com/assets/pointer.png
+    default: https://blog-file.anymelon.com/assets/left_ptr.png
+    not-allowed: https://blog-file.anymelon.com/assets/circle.png
+    zoom-out: https://blog-file.anymelon.com/assets/zoom-out.png
+    zoom-in: https://blog-file.anymelon.com/assets/zoom-in.png
+    grab: https://blog-file.anymelon.com/assets/openhand.png
   scrollbar:
     size: 8px
     border: 2px
@@ -27,9 +27,9 @@ cover:
 plugins:
   ################# required plugins ################
   # jquery
-  jquery: https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js
+  jquery: https://blog-file.anymelon.com/assets/jquery.min.js
   # fontawesome
-  fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css
+  fontawesome: https://blog-file.anymelon.com/assets/css/all.min.css
   ################# optional plugins ################
 
   ######### Plugins to improve loading speed:
@@ -45,9 +45,9 @@ plugins:
   # https://www.npmjs.com/package/vanilla-lazyload
   lazyload:
     enable: true
-    js: https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js
+    js: https://blog-file.anymelon.com/assets/lazyload.min.js
     onlypost: false
-    loadingImg: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg
+    loadingImg: https://blog-file.anymelon.com/assets/c617bfd2497fcea598e621413e315c368f8d8e.svg
     blurIn: true # 模糊加载效果 （loadingImg为空时有效）
 
   ######### Plugins to optimize the experience:
@@ -55,14 +55,14 @@ plugins:
   # highlight.js
   highlightjs:
     enable: true # Please set hexo.config.highlight.enable = false !!!
-    js: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js
-    css: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/atelier-sulphurpool-light.min.css
+    js: https://blog-file.anymelon.com/assets/highlight.min.js
+    css: https://blog-file.anymelon.com/assets/atelier-sulphurpool-light.min.css
     # more: https://www.jsdelivr.com/package/npm/highlight.js?path=styles
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:
     enable: #true
-    js: https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js
+    js: https://blog-file.anymelon.com/assets/scrollreveal.min.js
     distance: 32px
     duration: 800 # ms
     interval: 20 # ms
@@ -71,7 +71,7 @@ plugins:
   # Codeblock Copy Button
   clipboard:
     enable: true
-    js: https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js
+    js: https://blog-file.anymelon.com/assets/clipboard.min.js
 
   ######### Plugins for SEO:
 
@@ -83,18 +83,18 @@ plugins:
   # Button Ripple Effect
   nodewaves:
     enable: true
-    css: https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css
-    js: https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js
+    css: https://blog-file.anymelon.com/assets/waves.min.css
+    js: https://blog-file.anymelon.com/assets/waves.min.js
 
   # fontawesome animation
   fontawesome_animation:
     enable: true
-    css: https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css
+    css: https://blog-file.anymelon.com/assets/font-awesome-animation.min.css
 
   # Typing Effects
   comment_typing:
     enable: true
-    js: https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js
+    js: https://blog-file.anymelon.com/assets/comment_typing.js
 
   # APlayer is only available in mainland China.
   # APlayer config: https://github.com/metowolf/MetingJS
@@ -224,7 +224,7 @@ article:
     top_meta: [ author, category, date, counter, wordcount ]
     scheme: landscape # landscape
     # pin icon for post
-    pin_icon: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4cc.svg
+    pin_icon: https://blog-file.anymelon.com/assets/1f4cc.svg
     # auto generate title if not exist
     auto_title: true # false, true
     # auto generate excerpt if not exist
@@ -260,7 +260,7 @@ article:
         icon: fas fa-bookmark
         max_count: 5
         # 设为空则不使用文章头图
-        placeholder_img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg
+        placeholder_img: https://blog-file.anymelon.com/assets/046.jpg
       # ----------------
       # 版权声明组件 (for layout: post/docs)
       copyright:
@@ -319,15 +319,15 @@ article:
       # 分享
       share:
         - id: qq
-          img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png
+          img: https://blog-file.anymelon.com/assets/qq.png
         - id: qzone
-          img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png
+          img: https://blog-file.anymelon.com/assets/qzone.png
         - id: weibo
-          img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png
+          img: https://blog-file.anymelon.com/assets/weibo.png
         - id: qrcode # 当id为qrcode时需要安装插件  npm i hexo-helper-qrcode
-          img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qrcode.png
+          img: https://blog-file.anymelon.com/assets/qrcode.png
         - id: # telegram
-          img: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png
+          img: # https://blog-file.anymelon.com/assets/telegram.png
 
 
 seo:
