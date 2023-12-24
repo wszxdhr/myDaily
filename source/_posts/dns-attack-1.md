@@ -2,7 +2,7 @@
 title: DNS劫持原理及实践（上）
 date: 2021-02-24 09:48:49
 tags: [DNS,网络安全]
-categories: [学习和实践笔记]
+categories: [网络知识]
 references:
   - title: 《DNS 域名解析流程剖析（详解版）》
     url: http://c.biancheng.net/view/6455.html
